@@ -11,13 +11,14 @@ $(tests):
 
 tests: $(tests)
 
-info:
-	@kubectl get pods
-	@kubectl describe pods
+#info:
+#	@kubectl get pods
+#	@kubectl describe pods
 
-logs-$(tests):
-	@make -C $(subst logs-,,$@) logs
+#logs-$(tests):
+#	@make -C $(subst logs-,,$@) logs
 
-logs: info logs-$(tests)
+#logs: info logs-$(tests)
 
-.PHONY: info logs logs-$(tests) tests $(tests)
+#.PHONY: info logs logs-$(tests) tests $(tests)
+.PHONY: tests $(tests)
