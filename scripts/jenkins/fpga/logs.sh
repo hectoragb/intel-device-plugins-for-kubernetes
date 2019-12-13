@@ -11,3 +11,4 @@ set -o xtrace
 set -o errexit
 
 kubectl logs $(kubectl get pods | grep -i test-fpga-region | awk '{print $1}')
+kubectl delete pod test-fpga-region
