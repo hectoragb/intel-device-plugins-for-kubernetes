@@ -20,7 +20,7 @@ kubectl create -f ${REPO_ROOT}/deployments/fpga_plugin/fpga_plugin_service_accou
 kubectl annotate node --all 'fpga.intel.com/device-plugin-mode=region' # Set region mode for the plugin 
 kubectl create -f ${REPO_ROOT}/deployments/fpga_plugin/fpga_plugin.yaml # Create plugin daemonset 
 kubectl create -f ${REPO_ROOT}/deployments/fpga_admissionwebhook/mappings-collection.yaml 
-kubectl wait --for=condition=Ready pod --all --timeout=5m --namespace kube-system && sleep 60s
+kubectl wait --for=condition=Ready pod --all --timeout=5m --namespace kube-system && sleep 3m
 
 # Verification for debugging purposes
 kubectl get pods --namespace kube-system | grep intel-fpga-webhook # Check if pod is running
