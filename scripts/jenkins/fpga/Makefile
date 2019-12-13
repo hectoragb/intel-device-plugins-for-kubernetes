@@ -4,7 +4,7 @@
 #
 # Makefile for FPGA jenkins.
 
-all: plugin tests
+all: plugin tests logs
 
 plugin:
 	@./plugin-deploy.sh
