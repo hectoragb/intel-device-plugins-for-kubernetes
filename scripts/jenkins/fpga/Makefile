@@ -7,18 +7,18 @@
 all: plugin tests logs info clean
 
 plugin:
-    @./plugin-deploy.sh
+	@./plugin-deploy.sh
 
 tests:
-    @./nlb-deploy.sh
+	@./nlb-deploy.sh
 
 logs:
-    @./logs.sh
+	@./logs.sh
 
 info:
-    @./info.sh
+	@./info.sh
 
 clean: 
-    @./clean.sh
+	@./clean.sh
 
 .PHONY: all plugin tests logs info clean
