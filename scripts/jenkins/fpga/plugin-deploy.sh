@@ -12,6 +12,8 @@ set -o xtrace
 set -o errexit
 
 REPO_ROOT=$(realpath $(dirname $0)/../../..)
+export GOPATH=/home/clear/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 go get -u github.com/cloudflare/cfssl/cmd/cfssl
 cd ${REPO_ROOT}/scripts ; ./webhook-deploy.sh --namespace kube-system --mode orchestrated # Deploy webhook
 kubectl create -f ${REPO_ROOT}/deployments/fpga_plugin/fpga_plugin_service_account.yaml # Create service account for the plugin 
