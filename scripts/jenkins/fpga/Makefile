@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-# Makefile for QAT-DPDK jenkins.
+# Makefile for FPGA jenkins.
 
 all: plugin tests logs info clean
 
@@ -10,7 +10,7 @@ plugin:
 	@./plugin-deploy.sh
 
 tests:
-	@./tc-deploy.sh
+	@./nlb-deploy.sh
 
 logs:
 	@./logs.sh
