@@ -171,6 +171,8 @@ pipeline {
       environment {
         WORKDIR="${env.WORKSPACE}/scripts/jenkins"
         GOROOT="/usr/lib/golang"
+        GOPATH="/tmp/go"
+        PATH="${env.PATH}:/usr/local/go/bin:${GOPATH}/bin"
       }
       stages {
         stage('Set tag') {
